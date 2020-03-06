@@ -186,6 +186,7 @@ def _build(argv, config, versions, current_name, is_root):
     """
     # Patch.
     application._module.Config = ConfigInject
+    application.Config = ConfigInject
     if config.show_banner:
         EventHandlers.BANNER_GREATEST_TAG = config.banner_greatest_tag
         EventHandlers.BANNER_MAIN_VERSION = config.banner_main_ref
